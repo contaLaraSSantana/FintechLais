@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Início</title>
+    <link rel="stylesheet" href="static/poupanca.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-inicio">
+        <div class="dinheiro">
+            <p class="titulo">Seu Dinheiro:</p>
+            <p class="valor">{{(total_receita - total_despesa) - total_poupanca}}</p>
+        </div>
+
+        <div class="tabela">
+            <div class="receita">
+                <a class="escrita" href="/receitas">RECEITA</a>
+                <p>___________</p>
+                <p class="numero">{{total_receita}}</p>
+            </div>
+
+            <div class="despesa">
+                <a class="escrita" href="/despesas">DESPESA</a>
+                <p>___________</p>
+                <p class="numero">{{total_despesa}}</p>
+            </div>
+
+            <div class="poupanca">
+                <a class="escrita" href="poupanca">POUPANÇA</a>
+                <p>___________</p>
+                <p class="numero">{{total_poupanca}}</p>
+            </div>
+        </div>
+
+        <div class="atividades">
+            <p class="p">Atividades Recentes:</p>
+
+            <div class="itens">
+                <div class="primeira">
+
+                     {% for receita in selecao_receita %}
+                        <div class="container">
+                            <div class="bloco1">
+                                <p class="nome">{{ receita.descricao}}</p>
+                                <p class="data">{{ receita.datas}}</p>
+                            </div>
+                            <div class="bloco2">
+                                <p class="valor">R$ {{ receita.valor}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="segunda">
+                    {% for despesa in selecao_despesa %}
+                        <div class="container">
+                            <div class="bloco1">
+                                <p class="nome">{{ despesa.descricao}}</p>
+                                <p class="data">{{ despesa.datas}}</p>
+                            </div>
+                            <div class="bloco2">
+                                <p class="valor">R$ {{ despesa.valor}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6A6ED6;
+  background-color: #02006B;
+}
+
+section h2{
+color:#FFD43A;
+}
+
+header {
+  background-color: #02006B;
+  padding: 10px;
+  text-align: center;
+}
+
+header img {
+  max-width: 350px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background: rgb(2,0,107);
+  background: linear-gradient(180deg, rgba(2,0,107,1) 0%, rgba(87,142,229,1) 100%);
+}
+
+.login, .signup {
+  width: 650px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.login h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #FFD43A;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #02006B;
+  color: #FFD43A;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #inherit;
+  background-color: transparent;
+  border:none;
+  cursor:pointer;
+  margin-top: 10px;
+  padding:10px 275px;
+  border-radius:5px;
+  font-size:15px;
+  background-color:#FDC500;
+  color:#00296B;
+
+}

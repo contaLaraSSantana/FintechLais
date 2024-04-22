@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='poupanca.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>Adicionar</title>
+</head>
+<body>
+    <header class="header-container">
+        <h1>Adicionar</h1>
+    </header>
+    <main class="main1">
+        <form action="{{url_for('adicionar')}}" method="post">
+            <div class="valor">
+                <h3>Valor:</h3>
+                <input name="valor" type="number">
+            </div>
+            <div class="categoria">
+                <h3>Categoria:</h3>
+                <select id="categoria"  name="categoria">
+                    <option value="receita" >Receitas</option>
+                    <option value="despesa" >Despesas</option>
+                    <option value="poupanca" >Poupança</option>
+                </select>
+            </div>
+            <div class="date">
+                <h3>Data:</h3>
+                <input name="datas" type="date">
+            </div>
+            <div class="desc">
+                <h3>Descrição:</h3>
+                <input name="descricao" type="text">
+            </div>
+            <div class="btn2">
+                <button>Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

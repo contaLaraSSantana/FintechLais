@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"><meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div>
+        <h1>Receitas</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="bolinha">
+            <div class="text-bolinha">
+                <h2>Total</h2>
+                <h3>R$ {{total}}</h3>
+            </div>
+        </div>
+        <div class="meio">
+            {% if receitas %}
+                {% for receita in receitas %}
+                    <div class="card">
+                        <h3>{{ receita.descricao}}</h3>
+                        <h4>R$ {{ receita.valor}}</h4>
+                        <h6>{{ receita.datas}}</h6>
+                    </div>
+            {% endfor %}
+    {% else %}
+        <p>Nenhuma receita cadastrada.</p>
+    {% endif %}
+            <div class="baixo">
+                <button class="btn"><a  href="/adicionar" >+</a></button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
